@@ -4,3 +4,7 @@ const listaDeDestinos = new Array(
     `São Paulo`,
     `Rio de Janeiro`
 );
+
+const idadeComprador = 18;
+const estaAcompanhada = false;
+const temPassagemComprada = true;
