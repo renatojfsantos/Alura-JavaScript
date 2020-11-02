@@ -17,7 +17,7 @@ export class ContaCorrente{
 
      // #saldo =0 https://github.com/tc39/proposal-class-fields#private-fields
     _saldo = 0;
-    
+
     get saldo(){
         return this._saldo;
     }
@@ -27,4 +27,12 @@ export class ContaCorrente{
             this._saldo -= valor;
             return valor;
         }
+    }
+    
+    depositar(valor){
+        if(valor <= 0)
+        {
+            return;
+        } 
+        this._saldo += valor;           
     }
