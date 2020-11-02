@@ -9,7 +9,7 @@ export class ContaCorrente{
             this._cliente = novoValor;
         }
     }
-    
+
     get cliente(){
         return this._cliente;
     }
@@ -17,3 +17,14 @@ export class ContaCorrente{
 
      // #saldo =0 https://github.com/tc39/proposal-class-fields#private-fields
     _saldo = 0;
+    
+    get saldo(){
+        return this._saldo;
+    }
+
+    sacar(valor){
+        if(this._saldo >= valor){
+            this._saldo -= valor;
+            return valor;
+        }
+    }
