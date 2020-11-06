@@ -13,8 +13,6 @@ export class ContaCorrente{
     get cliente(){
         return this._cliente;
     }
-
-
      // #saldo =0 https://github.com/tc39/proposal-class-fields#private-fields
     _saldo = 0;
 
@@ -38,9 +36,7 @@ export class ContaCorrente{
     }
     
     tranferir(valor, conta){
-        
         const valorSacado = this.sacar(valor);
-        conta.depositar(valorSacado);
-        
+        conta.depositar(valorSacado);       
     }
 }
